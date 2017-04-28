@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.felipe.santotomas.ResultActivity">
+
+    <TextView
+        android:id="@+id/result_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Datos Ingresados"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="50dp" />
+
+    <TextView
+        android:id="@+id/result_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:hint="Nombre"
+        android:layout_below="@+id/result_title"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="23dp" />
+
+    <TextView
+        android:id="@+id/result_lastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Apellido"
+        android:layout_alignStart="@+id/result_name"
+        android:layout_below="@+id/result_name"
+        android:layout_marginTop="63dp" />
+
+    <TextView
+        android:id="@+id/result_age"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Edad"
+        android:layout_alignStart="@+id/result_lastname"
+        android:layout_below="@+id/result_lastname"
+        android:layout_marginTop="68dp" />
+
+    <TextView
+        android:id="@+id/result_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="74dp"
+        android:hint="Email"
+        android:layout_below="@+id/result_age"
+        android:layout_alignStart="@+id/result_age" />
+
+    <TextView
+        android:id="@+id/result_career"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/result_email"
+        android:layout_below="@+id/result_email"
+        android:layout_marginTop="61dp"
+        android:hint="Carrera" />
+
+</RelativeLayout>
