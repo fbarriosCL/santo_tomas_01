@@ -50,7 +50,7 @@
         android:layout_width="368dp"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:hint="Edad"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="140dp"
@@ -72,16 +72,6 @@
         android:layout_alignParentEnd="true" />
 
     <Button
-        android:id="@+id/clean_form"
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        android:text="Formulario Limpio"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="351dp"
-        android:layout_above="@+id/buttom_clean"
-        android:layout_alignParentEnd="true" />
-
-    <Button
         android:id="@+id/buttom_clean"
         android:layout_width="163dp"
         android:layout_height="44dp"
@@ -89,7 +79,7 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="420dp"
         android:layout_alignTop="@+id/button_send"
-        android:layout_alignStart="@+id/clean_form" />
+        android:layout_alignStart="@+id/career" />
 
     <Button
         android:id="@+id/button_send"

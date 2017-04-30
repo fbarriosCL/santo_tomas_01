@@ -17,8 +17,6 @@ public class FormActivity extends AppCompatActivity {
     private String email, name, last_name, age, career;
     private Button btnClean, btnSend;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,15 +39,48 @@ public class FormActivity extends AppCompatActivity {
                 age       = etAge.getText().toString();
                 career    = etCareer.getText().toString();
 
-                Intent intent = new Intent(FormActivity.this, ResultActivity.class);
-                intent.putExtra("name", name);
-                intent.putExtra("lastname", last_name);
-                intent.putExtra("carrer", career);
-                intent.putExtra("age", age);
-                intent.putExtra("email", email);
-                Toast.makeText(getApplicationContext(), name, Toast.LENGTH_SHORT).show();
-                startActivity(intent);
+                if(name.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "El nombre no puede ser vacio.", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    if(last_name.isEmpty()){
+                        Toast.makeText(getApplicationContext(), "El apellido no puede ser vacio.", Toast.LENGTH_SHORT).show();
+                    }else{
 
+                        if(email.isEmpty()){
+                            Toast.makeText(getApplicationContext(), "El correo electronico no puede ser vacio.", Toast.LENGTH_SHORT).show();
+                        }else{
+                            if(age.isEmpty()){
+                                Toast.makeText(getApplicationContext(), "La edad no puede ser vacio.", Toast.LENGTH_SHORT).show();
+                            }else{
+                                if(career.isEmpty()){
+                                    Toast.makeText(getApplicationContext(), "Carrera no puede ser vacio.", Toast.LENGTH_SHORT).show();
+                                }else{
+                                    Intent intent = new Intent(FormActivity.this, ResultActivity.class);
+                                    intent.putExtra("name", name);
+                                    intent.putExtra("lastname", last_name);
+                                    intent.putExtra("carrer", career);
+                                    intent.putExtra("age", age);
+                                    intent.putExtra("email", email);
+                                    Toast.makeText(getApplicationContext(), name, Toast.LENGTH_SHORT).show();
+                                    startActivity(intent);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        btnClean.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                etName.setText("");
+                etLastName.setText("");
+                etEmail.setText("");
+                etAge.setText("");
+                etCareer.setText("");
             }
         });
     }
